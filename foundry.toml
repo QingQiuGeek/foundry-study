@@ -1,6 +1,29 @@
+# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+# 默认配置文件，所有其他配置文件都继承这个配置文件的值
 [profile.default]
 src = "src"
 out = "out"
 libs = ["lib"]
 
-# See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+# 添加一个名称为 local 的配置文件：
+[profile.local]
+
+
+# 给所有测试合约生成gas报告
+gas_reports = ["*"]
+
+# 代码格式化，命令是 forge fmt
+[fmt]
+line_length = 120
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "params_first"
+quote_style = "double"
+number_underscore = "thousands"
+single_line_statement_blocks = "preserve"
+
+[fuzz]
+
+[invariant]
